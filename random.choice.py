@@ -1,18 +1,14 @@
 import random
-a = input('choose between T or F')
-
-v1=int(input('valeur entre 0 et 15'))
-v2=int(input('valeur entre 0 et 15'))
-v3=int(input('valeur entre 0 et 15'))
-def alt(a,L,max):
-    L=[]
-    L.append('v1','v2','v3')
-    if a == 'T' :
-        return random.choice(L)
+def alt(boolen,L,min,max):
+    if boolen == True :
+        res = random.choice(L)
+        return res
     else :
-        return random.randomint(0,max)
-r=alt(a,L,100)
-print(r)
+        res = random.randint(min,max)
+        return res
+L=[2,3,9]
+sol = alt(False,L,1,4)
+print(sol)
 
 
         
